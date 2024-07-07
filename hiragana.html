@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .flash-card-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flash-card {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        #answer-container {
+            margin-bottom: 10px;
+        }
+
+        #answer {
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 50%;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+
+        #selection {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="flash-card-container">
+        <div id="selection">
+            <label for="script-select">Select script:</label>
+            <select id="script-select">
+                <option value="hiragana">Hiragana</option>
+                <option value="katakana">Katakana</option>
+            </select>
+        </div>
+        <div id="flash-card" class="flash-card">
+            <!-- Japanese character will be displayed here -->
+        </div>
+        <div id="answer-container">
+            <input type="text" id="answer" placeholder="Pronunciation">
+        </div>
+        <button id="check-answer">Check Answer</button>
+        <div id="result"></div>
+        <button id="next-char" style="display: none;">Next</button>
+    </div>
+    <script>
+        const characters = [
+            { hiragana: 'あ', katakana: 'ア', romanized: 'a', korean: '아' },
+            { hiragana: 'い', katakana: 'イ', romanized: 'i', korean: '이' },
+            { hiragana: 'う', katakana: 'ウ', romanized: 'u', korean: '우' },
+            { hiragana: 'え', katakana: 'エ', romanized: 'e', korean: '에' },
+            { hiragana: 'お', katakana: 'オ', romanized: 'o', korean: '오' },
+            { hiragana: 'か', katakana: 'カ', romanized: 'ka', korean: '카' },
+            { hiragana: 'き', katakana: 'キ', romanized: 'ki', korean: '키' },
+            { hiragana: 'く', katakana: 'ク', romanized: 'ku', korean: '쿠' },
+            { hiragana: 'け', katakana: 'ケ', romanized: 'ke', korean: '케' },
+            { hiragana: 'こ', katakana: 'コ', romanized: 'ko', korean: '코' },
+            { hiragana: 'さ', katakana: 'サ', romanized: 'sa', korean: '사' },
+            { hiragana: 'し', katakana: 'シ', romanized: 'shi', korean: '시' },
+            { hiragana: 'す', katakana: 'ス', romanized: 'su', korean: '수' },
+            { hiragana: 'せ', katakana: 'セ', romanized: 'se', korean: '세' },
+            { hiragana: 'そ', katakana: 'ソ', romanized: 'so', korean: '소' },
+            { hiragana: 'た', katakana: 'タ', romanized: 'ta', korean: '타' },
+            { hiragana: 'ち', katakana: 'チ', romanized: 'chi', korean: '치' },
+            { hiragana: 'つ', katakana: 'ツ', romanized: 'tsu', korean: '츠' },
+            { hiragana: 'て', katakana: 'テ', romanized: 'te', korean: '테' },
+            { hiragana: 'と', katakana: 'ト', romanized: 'to', korean: '토' },
+            { hiragana: 'な', katakana: 'ナ', romanized: 'na', korean: '나' },
+            { hiragana: 'に', katakana: 'ニ', romanized: 'ni', korean: '니' },
+            { hiragana: 'ぬ', katakana: 'ヌ', romanized: 'nu', korean: '누' },
+            { hiragana: 'ね', katakana: 'ネ', romanized: 'ne', korean: '네' },
+            { hiragana: 'の', katakana: 'ノ', romanized: 'no', korean: '노' },
+            { hiragana: 'は', katakana: 'ハ', romanized: 'ha', korean: '하' },
+            { hiragana: 'ひ', katakana: 'ヒ', romanized: 'hi', korean: '히' },
+            { hiragana: 'ふ', katakana: 'フ', romanized: 'fu', korean: '후' },
+            { hiragana: 'へ', katakana: 'ヘ', romanized: 'he', korean: '헤' },
+            { hiragana: 'ほ', katakana: 'ホ', romanized: 'ho', korean: '호' },
+            { hiragana: 'ま', katakana: 'マ', romanized: 'ma', korean: '마' },
+            { hiragana: 'み', katakana: 'ミ', romanized: 'mi', korean: '미' },
+            { hiragana: 'む', katakana: 'ム', romanized: 'mu', korean: '무' },
+            { hiragana: 'め', katakana: 'メ', romanized: 'me', korean: '메' },
+            { hiragana: 'も', katakana: 'モ', romanized: 'mo', korean: '모' },
+            { hiragana: 'や', katakana: 'ヤ', romanized: 'ya', korean: '야' },
+            { hiragana: 'ゆ', katakana: 'ユ', romanized: 'yu', korean: '유' },
+            { hiragana: 'よ', katakana: 'ヨ', romanized: 'yo', korean: '요' },
+            { hiragana: 'ら', katakana: 'ラ', romanized: 'ra', korean: '라' },
+            { hiragana: 'り', katakana: 'リ', romanized: 'ri', korean: '리' },
+            { hiragana: 'る', katakana: 'ル', romanized: 'ru', korean: '루' },
+            { hiragana: 'れ', katakana: 'レ', romanized: 're', korean: '레' },
+            { hiragana: 'ろ', katakana: 'ロ', romanized: 'ro', korean: '로' },
+            { hiragana: 'わ', katakana: 'ワ', romanized: 'wa', korean: '와' },
+            { hiragana: 'を', katakana: 'ヲ', romanized: 'wo', korean: '오' },
+            { hiragana: 'ん', katakana: 'ン', romanized: 'n', korean: '응' }
+        ];
+
+        let currentChar = {};
+        let currentScript = 'hiragana';
+
+        function getRandomCharacter() {
+            const filteredCharacters = characters.filter(char => char[currentScript]);
+            const randomIndex = Math.floor(Math.random() * filteredCharacters.length);
+            currentChar = filteredCharacters[randomIndex];
+            document.getElementById('flash-card').innerText = currentChar[currentScript];
+            document.getElementById('result').innerText = '';
+            document.getElementById('answer').value = '';
+            document.getElementById('next-char').style.display = 'none';
+            document.getElementById('check-answer').style.display = 'inline';
+            document.getElementById('answer').focus();
+        }
+
+        document.getElementById('script-select').addEventListener('change', (event) => {
+            currentScript = event.target.value;
+            getRandomCharacter();
+        });
+
+        document.getElementById('check-answer').addEventListener('click', () => {
+            const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+            const resultDiv = document.getElementById('result');
+            if (userAnswer === currentChar.korean || userAnswer === currentChar.romanized) {
+                resultDiv.innerText = 'Correct!';
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.innerText = `Incorrect. The correct answer is ${currentChar.korean} (${currentChar.romanized}).`;
+                resultDiv.style.color = 'red';
+            }
+            document.getElementById('next-char').style.display = 'inline';
+            document.getElementById('check-answer').style.display = 'none';
+            document.getElementById('next-char').focus();
+        });
+
+        document.getElementById('next-char').addEventListener('click', () => {
+            getRandomCharacter();
+        });
+
+        document.getElementById('answer').addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                const userAnswer = document.getElementById('answer').value.trim();
+                if (userAnswer !== '') {
+                    if (document.getElementById('check-answer').style.display !== 'none') {
+                        document.getElementById('check-answer').click();
+                    } else {
+                        document.getElementById('next-char').click();
+                    }
+                } else {
+                    document.getElementById('answer').focus();
+                }
+            }
+        });
+
+        // Display the first character when the page loads
+        window.onload = getRandomCharacter;
+    </script>
+</body>
+</html>
