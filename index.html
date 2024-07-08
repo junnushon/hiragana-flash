@@ -17,23 +17,27 @@
     </script>
 </head>
 <body>
-    <div class="flash-card-container">
-        <div id="selection">
-            <label for="script-select">Select script:</label>
-            <select id="script-select">
-                <option value="hiragana">Hiragana</option>
-                <option value="katakana">Katakana</option>
-            </select>
+    <div class="container">
+        <div class="spacer"></div>
+        <div class="flash-card-container">
+            <div id="selection">
+                <label for="script-select">Select script:</label>
+                <select id="script-select">
+                    <option value="hiragana">Hiragana</option>
+                    <option value="katakana">Katakana</option>
+                </select>
+            </div>
+            <div id="flash-card" class="flash-card">
+                <!-- Japanese character will be displayed here -->
+            </div>
+            <div id="answer-container">
+                <input type="text" id="answer" placeholder="Pronunciation">
+            </div>
+            <button id="check-answer">Check Answer</button>
+            <div id="result"></div>
+            <button id="next-char" style="display: none;">Next</button>
         </div>
-        <div id="flash-card" class="flash-card">
-            <!-- Japanese character will be displayed here -->
-        </div>
-        <div id="answer-container">
-            <input type="text" id="answer" placeholder="Pronunciation">
-        </div>
-        <button id="check-answer">Check Answer</button>
-        <div id="result"></div>
-        <button id="next-char" style="display: none;">Next</button>
+        <div class="spacer"></div>
     </div>
     <footer>
         <p><a href="https://github.com/junnushon/hiragana-flash" target="_blank">https://github.com/junnushon/hiragana-flash</a></p>
