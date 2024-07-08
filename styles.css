@@ -78,6 +78,11 @@ footer a:hover {
 }
 
 @media (min-width: 769px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
     .flash-card-container {
         margin: 0;
     }
