@@ -49,17 +49,6 @@ button {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-    body {
-        justify-content: flex-start;
-        padding-top: 20px;
-    }
-
-    .flash-card-container {
-        width: 90%;
-    }
-}
-
 footer {
     margin-top: auto;
     text-align: center;
@@ -74,4 +63,16 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    .flash-card-container {
+        width: 90%;
+        margin-top: 20px;
+    }
 }
