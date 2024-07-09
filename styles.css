@@ -79,6 +79,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .top-spacer {
+        display: none;
+    }
+
     body {
         justify-content: flex-start;
         padding-top: 20px;
