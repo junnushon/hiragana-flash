@@ -16,7 +16,7 @@ You can access the live site here: [Hiragana and Katakana Flashcards](https://ju
 - Allows you to switch between Hiragana and Katakana.
 - Adjusts the probability of character exposure based on usage.
 
-
+---
 
 - 플래시카드 기능을 사용하여 무작위 히라가나 또는 가타카나 문자를 표시합니다.
 - 로마자 또는 한국어로 발음을 입력할 수 있습니다.
