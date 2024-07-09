@@ -67,7 +67,7 @@ document.getElementById('check-answer').addEventListener('click', () => {
     const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
     const resultDiv = document.getElementById('result');
     if (userAnswer === currentChar.korean || userAnswer === currentChar.romanized) {
-        resultDiv.innerText = 'Correct!';
+        resultDiv.innerText = `Correct! ${currentChar.korean} (${currentChar.romanized})`;
         resultDiv.style.color = 'green';
     } else {
         resultDiv.innerText = `Incorrect. The correct answer is ${currentChar.korean} (${currentChar.romanized}).`;
