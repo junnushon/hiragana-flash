@@ -4,10 +4,17 @@ This is a simple web application that uses flashcard functionality to help you l
 
 이 웹 애플리케이션은 플래시카드 기능을 사용하여 일본어의 두 가지 문자 체계인 히라가나와 가타카나를 배우는 데 도움을 줍니다. 애플리케이션은 무작위 히라가나 또는 가타카나 문자를 표시하며, 로마자(로마자로 된 일본어) 또는 한국어 발음을 입력할 수 있습니다.
 
+
 ## Live Site / 라이브 사이트
 
 You can access the live site here: [hiragana.kr](https://hiragana.kr/)
 
+## Updates
+- 2024-07-09 : Add characters / 문자셋 추가
+  - Voiced consonants: 濁音 (だくおん, dakuon) / 탁음
+  - Semi-voiced consonants: 半濁音 (はんだくおん, handakuon) / 반탁음
+  - Contracted sounds: 拗音 (ようおん, youon) / 요음
+  
 ## Features / 특징
 
 - Displays a random Hiragana or Katakana character using flashcard functionality.
