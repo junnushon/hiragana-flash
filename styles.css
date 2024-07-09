@@ -63,7 +63,6 @@ button {
 }
 
 footer {
-    margin-top: auto;
     text-align: center;
     padding: 10px;
     font-size: 1rem;
@@ -83,14 +82,17 @@ footer a:hover {
         display: none;
     }
 
-    body {
+    .container {
         justify-content: flex-start;
-        padding-top: 20px;
+    }
+
+    body {
+        padding-top: 0;
     }
 
     .flash-card-container {
         width: 90%;
-        margin-top: 20px;
+        margin-top: 0;
     }
 }
 
