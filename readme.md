@@ -6,7 +6,7 @@ This is a simple web application that uses flashcard functionality to help you l
 
 ## Live Site / 라이브 사이트
 
-You can access the live site here: [Hiragana and Katakana Flashcards](https://junnushon.github.io/hiragana-flash/)
+You can access the live site here: [hiragana.kr](https://hiragana.kr/)
 
 ## Features / 특징
 
@@ -26,7 +26,7 @@ You can access the live site here: [Hiragana and Katakana Flashcards](https://ju
 
 ## How to Use / 사용방법
 
-1. Visit the [live site](https://junnushon.github.io/hiragana-flash/).
+1. Visit the [hiragana.kr](https://hiragana.kr/).
 2. Select the script you want to learn (Hiragana or Katakana) from the dropdown menu.
 3. A random character will be displayed.
 4. Enter the pronunciation in the text box and click "Check Answer".
