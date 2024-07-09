@@ -33,7 +33,7 @@ You can access the live site here: [Hiragana and Katakana Flashcards](https://ju
 5. You will receive feedback on whether your answer is correct or incorrect.
 6. Click "Next" to move on to the next character.
 
-
+---
 
 1. [라이브 사이트](https://junnushon.github.io/hiragana-flash/).에 방문합니다.
 2. 드롭다운 메뉴에서 배우고 싶은 문자(히라가나 또는 가타카나)를 선택합니다.
