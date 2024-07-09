@@ -4,7 +4,9 @@ let currentScript = 'hiragana';
 let recentCharacters = [];
 
 function loadCharacters(script) {
-    fetch(`${script}.json`)
+    const scriptFile = script.includes('+') ? `${script}.json` : `${script}.json`;
+
+    fetch(scriptFile)
         .then(response => response.json())
         .then(data => {
             characters = data.map(char => ({
