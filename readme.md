@@ -16,6 +16,7 @@ You can access the live site here: [Hiragana and Katakana Flashcards](https://ju
 - Allows you to switch between Hiragana and Katakana.
 - Adjusts the probability of character exposure based on usage.
 
+
 - 플래시카드 기능을 사용하여 무작위 히라가나 또는 가타카나 문자를 표시합니다.
 - 로마자 또는 한국어로 발음을 입력할 수 있습니다.
 - 답변이 맞았는지 틀렸는지에 대한 피드백을 제공합니다.
@@ -30,6 +31,7 @@ You can access the live site here: [Hiragana and Katakana Flashcards](https://ju
 4. Enter the pronunciation in the text box and click "Check Answer".
 5. You will receive feedback on whether your answer is correct or incorrect.
 6. Click "Next" to move on to the next character.
+
 
 1. [라이브 사이트](https://junnushon.github.io/hiragana-flash/).에 방문합니다.
 2. 드롭다운 메뉴에서 배우고 싶은 문자(히라가나 또는 가타카나)를 선택합니다.
