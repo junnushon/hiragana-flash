@@ -1,5 +1,11 @@
 # Hiragana and Katakana Flashcards / 히라가나 및 가타카나 플래시카드
 
+![GitHub repo size](https://img.shields.io/github/repo-size/junnushon/hiragana-flash)
+![GitHub issues](https://img.shields.io/github/issues/junnushon/hiragana-flash)
+![GitHub forks](https://img.shields.io/github/forks/junnushon/hiragana-flash)
+![GitHub stars](https://img.shields.io/github/stars/junnushon/hiragana-flash)
+![GitHub license](https://img.shields.io/github/license/junnushon/hiragana-flash)
+
 This is a simple web application that uses flashcard functionality to help you learn Hiragana and Katakana, two of the Japanese writing systems. The application displays a random Hiragana or Katakana character, and you can enter the pronunciation in Romaji (Romanized Japanese) or Korean. 
 
 이 웹 애플리케이션은 플래시카드 기능을 사용하여 일본어의 두 가지 문자 체계인 히라가나와 가타카나를 배우는 데 도움을 줍니다. 애플리케이션은 무작위 히라가나 또는 가타카나 문자를 표시하며, 로마자(로마자로 된 일본어) 또는 한국어 발음을 입력할 수 있습니다.
