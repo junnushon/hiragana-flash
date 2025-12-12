@@ -13,7 +13,7 @@ This is a simple web application that uses flashcard functionality to help you l
 
 ## Live Site / 라이브 사이트
 
-You can access the live site here: [hiragana.kr](https://hiragana.kr/)
+You can access the live site [here](https://junnushon.github.io/hiragana-flash/)
 
 ## Updates
 - 2024-07-09 : Add characters / 문자셋 추가
