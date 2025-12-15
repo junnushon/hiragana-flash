@@ -39,7 +39,7 @@ You can access the live site [here](https://junnushon.github.io/hiragana-flash/)
 
 ## How to Use / 사용방법
 
-1. Visit the [hiragana.kr](https://hiragana.kr/)
+1. Visit the [here](https://junnushon.github.io/hiragana-flash/)
 2. Select the script you want to learn (Hiragana or Katakana) from the dropdown menu.
 3. A random character will be displayed.
 4. Enter the pronunciation in the text box and click "Check Answer".
@@ -48,7 +48,7 @@ You can access the live site [here](https://junnushon.github.io/hiragana-flash/)
 
 ---
 
-1. [hiragana.kr](https://hiragana.kr/)에 방문합니다.
+1. [여기](https://junnushon.github.io/hiragana-flash/)에 방문합니다.
 2. 드롭다운 메뉴에서 배우고 싶은 문자(히라가나 또는 가타카나)를 선택합니다.
 3. 무작위 문자가 표시됩니다.
 4. 텍스트 상자에 발음을 입력하고 "정답 확인" 버튼을 클릭합니다.
